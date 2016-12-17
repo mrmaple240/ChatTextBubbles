@@ -8,6 +8,7 @@
 .message {margin-top: -6px !important}
 .embed-wrapper {margin-top: 0;}
 .embed.embed-inline {margin: 0 0 4px !important;}
+.embed .embed-thumbnail iframe {min-width: 346px; min-height: 260px}
 .markup .inline, .markup .highlight {line-height: 24px;}
 .markup {padding-top: 4px !important;}
 .markup pre {max-width: 99% !important; margin-bottom: 6px;}
