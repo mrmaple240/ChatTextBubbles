@@ -21,6 +21,7 @@
 .message.first {margin-top: -15px}
 .message.first:before {content:''; display: block; position: relative; width: 8px; height: 12px; top: 38px; left: 6px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
 .message.mentioned .markup:before {content:''; display: block; position: absolute; width: 24px; height: auto; top: 3px; bottom: 3px; right: -12px; background:rgba(20,255,70,.45); border-top-left-radius: 500% 300%; border-bottom-left-radius:500% 300%;pointer-events: none;}
+.message-group .comment .markup code.inline, .message-group .comment .markup pre code {background: rgba(20,20,20,.18) !important;}
 
 /* light theme */
 .theme-light .markup,.theme-light  .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {background: rgba(202,207,215,.4) !important;}
