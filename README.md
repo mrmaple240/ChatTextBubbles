@@ -1,11 +1,11 @@
 # Chat Text Bubbles
 
 Stylize your clients chat messages to look like mobile text messages with text bubbles!
- 
- Minified: less padding around content
+ >Minified: less padding around content
  
 
 **Preview**:
+
 ![](https://i.imgur.com/LZW9JAv.gif)
 
 **Still Screenshots**:
