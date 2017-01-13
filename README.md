@@ -1,6 +1,6 @@
 # Chat Text Bubbles
 
-Stylize your clients chat messages to look like mobile text messages with the Chat Text Bubbles!
+Stylize your clients chat messages to look like mobile text messages with the Chat Text Bubbles! (Works on top of most themes too)
  >Minified: less padding around content
  
 
