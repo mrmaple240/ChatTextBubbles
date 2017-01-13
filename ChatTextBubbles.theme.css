@@ -1,8 +1,10 @@
 //META{"name":"Chat_Text_Bubbles","description":"Stylize your clients chat messages to look like mobile text messages with text bubbles!","author":"maple","version":"1.1"}*//{}
-.markup, .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {background: rgba(32,37,45,.4); position: relative; width: auto; min-width: 5px; min-height: 16px; max-width: 86%; padding: 4px !important; margin-bottom: 4px; border-radius: 4px;}
+
+.message-group:not(.compact) .markup:not(:empty), .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image, .attachment) {background: rgba(32,37,45,.4); position: relative; width: auto; min-width: 5px; min-height: 16px; max-width: 76%; padding: 4px !important; margin-bottom: 4px; border-radius: 4px;}
+.message-group .comment .attachment {margin: 0 0 5px;}
 .message-group {padding:10px 0 5px;}
 .message-group:last-of-type {padding-bottom:15px}
-.accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {max-width: 100%;}
+.accessory :-webkit-any(.embed, .attachment-image) {max-width: 100%;}
 .comment {display: flex; flex-direction: column; margin-top: -10px;}
 .message-group .mentioned .message-text {background:transparent !important;}
 .message-group .mentioned .message-text:after {border-left: 0; background:transparent;}
@@ -14,34 +16,61 @@
 .embed .embed-thumbnail iframe {min-width: 346px; min-height: 260px}
 .markup .inline, .markup .highlight {line-height: 24px;}
 .markup {padding-top: 4px !important;}
-.message-group .comment .markup:empty {padding:0 !important;min-width: 0px; top:20px;}
-.markup pre {max-width: 99% !important; margin-bottom: 6px;}
+.message-group .comment .edited {display: table; margin-left: 0; margin-top: 2px;}
+.message-group a {color: #46bae8;}
+.edit-container-outer .avatar-large {opacity:0;}
+.message-group .comment .attachment-image a {margin: 0;}
+.message-group .comment .markup:empty {padding:0;min-width: 0px; top:20px;}
+.markup pre {max-width: 99% !important; margin:2px; overflow: hidden;}
+.message-group .comment .markup pre code {word-break: break-all; width: calc(100% - 8px);}
 .message-group .embed {background-color: rgba(32,37,45,.4) !important;}
 .message-text :-webkit-any(.btn-option, .btn-reaction){margin-top: 10px;}
 .message-text div {order: 2;}
 .message-text .markup {order:1;}
 .message .message-text {display: flex; width: auto;}
 .message .image, .embed .embed-thumbnail-gifv video {max-width: 100%; height: auto;}
-.message.first {margin-top: 10px !important}
-.message.first .markup:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
-.message.mentioned.first .markup:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%);}
-.message.mentioned .markup {background-color:rgba(51, 234, 89,.45); text-shadow: 0 0 3px rgba(0,0,0,.2);}
-.message.mentioned .markup .mention {color: #acbeff; background-color: rgba(175,209,215,.07) !important;}
-.message.mentioned .markup .mention:hover {background-color: rgba(175,209,215,.2) !important;}
+.message-group .comment .message.first {margin-top: 10px}
+.message-group:not(.compact) .message.first .markup:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
+.message-group:not(.compact) .message.mentioned.first .markup:before, .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%);}
+.message-group:not(.compact) .message.mentioned .markup, .message-group.compact .message.mentioned .message-content {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px rgba(0,0,0,.2);}
+.app:not(.theme-light) .message-group:not(.compact) .message.mentioned .markup .mention:not(:hover) {color: #acbeff; background-color: rgba(175,209,215,.07) !important;}
+.app:not(.theme-light) .message-group:not(.compact) .message.mentioned .markup .mention:hover {color: #fff;}
 .message-group .comment .markup code.inline, .message-group .comment .markup pre code {background: rgba(20,20,20,.18) !important;}
+.message .mention {border-radius: 2px;}
+.system-message {margin-top: 14px;}
+.system-message .system-message-icon, .system-message .system-message-content {margin-top: -2px;}
+
+/* compact */
+.message-group.compact {margin-left:10px;}
+.message-group.compact .message .message-text{margin-left: -20px;}
+.message-group.compact .message.first .message-content:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
+.message-group.compact .accessory :-webkit-any(.embed-wrapper, .embed.embed-inline, .attachment-image, .invite-button, .reactions) {margin-left: 12px !important;}
+.message-group.compact .message .message-text .markup {text-indent: 0px; padding-left: 0px; margin-left: 0px; width: 100%; display: flex; margin-left: 12px; margin-top: 0;}
+.message-group.compact .message .message-text .markup .timestamp {color: transparent; margin-right: -116px; margin-left: 46px; margin-top: -7px;}
+.message-group.compact .message .message-text .markup .username-wrapper {width: 106px; display: flex; flex-flow: column; margin-right: 6px; margin-left: 4px; padding: 4px 6px 0; margin-top: -4px; align-items: flex-end;}
+.message-group.compact .message .message-text .markup .bot-tag {order: 3; display: table; margin-top: 4px; margin-right: 4px;}
+.message-group.compact .message .message-text .markup .user-name {order: 1; margin-top: -8px; word-break: break-word; text-align: right;}
+.message-group.compact .message .message-text .markup .renamer-tag {order: 2; margin-left: 0px; margin-right: 4px; margin-top: 4px; display: table;}
+.message-group.compact .message .message-text .markup span:last-of-type {margin-bottom: 4px;}
+.message-group.compact .message .message-text .markup .message-content:not(:empty), .message-group.compact .message-content ~ .CollapsibleEmbeds-processed {background: rgba(32,37,45,.4); position: relative; width: auto; min-width: 5px; min-height: 16px; max-width: 65%; padding: 4px !important; margin-bottom: 4px; border-radius: 4px; display: table; word-break: break-word; margin-top: 8px;}
+.message-group.compact .emoji {vertical-align: baseline;}
+.message-group.compact .system-message {margin-top: 24px;}
+.message-group.compact .comment .attachment {margin-left: 12px}
 
 /* light theme */
-.theme-light .markup,.theme-light  .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {background: rgba(202,207,215,.4) !important;}
+.theme-light .message-group:not(.compact) .markup, .theme-light .message-group.compact .message .message-content, .theme-light .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {background: rgba(202,207,215,.4) !important;}
 .theme-light .message-group .embed {background-color: rgba(202,207,215,.4) !important;}
-.theme-light .message.first .markup:before {background:linear-gradient(40deg, rgba(202,207,215,0) 0%, rgba(202,207,215,0) 42.99%, rgba(202,207,215,.43) 43%, rgba(202,207,215,.43) 100%) !important;}
-.theme-light .message.mentioned.first .markup:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%) !important;}
-.theme-light .message.mentioned .markup {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px rgba(0,0,0,0);}
-.theme-light .message.mentioned .markup .mention {color: #6f86da; background-color: rgba(175,209,215,.07) !important;}
-.theme-light .message.mentioned .markup .mention:hover {background-color: rgba(175,209,215,.2) !important;}
+.theme-light .message-group:not(.compact) .message.first .markup:before, .theme-light .message-group.compact .message.first .message-content:before {background:linear-gradient(40deg, rgba(202,207,215,0) 0%, rgba(202,207,215,0) 42.99%, rgba(202,207,215,.43) 43%, rgba(202,207,215,.43) 100%) !important;}
+.theme-light .message-group:not(.compact) .message.mentioned.first .markup:before, .theme-light .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%) !important;}
+.theme-light .message-group:not(.compact) .message.mentioned .markup, .theme-light .message-group.compact .message.mentioned .message-content {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px rgba(0,0,0,0);}
+.theme-light .message .mention:not(:hover) { background: rgba(241, 243, 251,.5); border-radius: 2px;}
+.theme-light .message .mention:hover {color: #fff;}
+
 
 /* bigger */
-:-webkit-any(.theme-light, .theme-dark) .markup, :-webkit-any(.theme-light, .theme-dark) .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) { padding: 14px !important; border-radius: 8px;}
-:-webkit-any(.theme-light, .theme-dark) .message.first .markup {border-top-left-radius: 8px 3px}
-:-webkit-any(.theme-light, .theme-dark) .markup {padding-top: 16px !important;}
-:-webkit-any(.theme-light, .theme-dark) .message .attachment-image {margin-top: 6px;}
-:-webkit-any(.theme-light, .theme-dark) .message-group .comment .markup:empty {top:28px;}
+.message-group:not(.compact) .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty), :-webkit-any(.theme-light, .theme-dark) .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) { padding: 14px !important; border-radius: 8px;}
+.message-group:not(.compact) .message.first .markup, .message-group.compact .message.first .message-text .markup .message-content:not(:empty) {border-top-left-radius: 8px 3px}
+.message-group:not(.compact) .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty) {padding-top: 16px !important;}
+.message .attachment-image {margin-top: 6px;}
+.message-group:not(.compact) .comment .markup:empty {top:28px;}
+.embed-color-pill ~ .embed {border-radius: 0 4px !important;}
