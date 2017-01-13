@@ -1,20 +1,19 @@
 # Chat Text Bubbles
 
-Stylize your clients chat messages to look like mobile text messages with text bubbles!
+Stylize your clients chat messages to look like mobile text messages with the Chat Text Bubbles!
  >Minified: less padding around content
  
 
 **Preview**:
+* Dark Theme
 
-![](https://i.imgur.com/LZW9JAv.gif)
-
-**Still Screenshots**:
+![](http://i.imgur.com/PKGUz3j.png)
 * Minified Dark
 
-![](https://i.imgur.com/Bc7Zecd.png)
+![](http://i.imgur.com/xMYSfR2.png)
 * Light Theme
 
-![](https://i.imgur.com/lNVyxWV.png)
+![](http://i.imgur.com/UdAUEGa.png)
 * Minified Light
 
-![](https://i.imgur.com/RLGU1aW.png)
+![](http://i.imgur.com/loIi7vr.png)
