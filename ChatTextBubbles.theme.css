@@ -68,9 +68,9 @@
 
 
 /* bigger */
-.message-group:not(.compact) .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty), :-webkit-any(.theme-light, .theme-dark) .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) { padding: 14px !important; border-radius: 8px;}
+.message-group:not(.compact) .message .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty), :-webkit-any(.theme-light, .theme-dark) .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) { padding: 14px !important; border-radius: 8px;}
 .message-group:not(.compact) .message.first .markup, .message-group.compact .message.first .message-text .markup .message-content:not(:empty) {border-top-left-radius: 8px 3px}
-.message-group:not(.compact) .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty) {padding-top: 16px !important;}
+.message-group:not(.compact) .message .markup, .message-group.compact .message .message-text .markup .message-content:not(:empty) {padding-top: 16px !important;}
 .message .attachment-image {margin-top: 6px;}
 .message-group:not(.compact) .comment .markup:empty {top:28px;}
 .embed-color-pill ~ .embed {border-radius: 0 4px !important;}
