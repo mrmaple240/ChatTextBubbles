@@ -75,3 +75,4 @@
 .message-group:not(.compact) .comment .markup:empty {top:28px;}
 .embed-color-pill ~ .embed {border-radius: 0 4px !important;}
 .message-group .comment {margin: -12px 0 -4px;}
+.message-group h2 {margin: -2px 0 -4px;}
