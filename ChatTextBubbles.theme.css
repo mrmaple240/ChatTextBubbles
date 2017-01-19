@@ -4,7 +4,7 @@
 .chat .message-group .comment .attachment {margin: 0 0 5px;}
 .chat .message-group {padding:10px 0 5px;}
 .chat .message-group:last-of-type {padding-bottom:15px}
-.chat .accessory :-webkit-any(.embed, .attachment-image) {max-width: 100%;}
+.chat .accessory :-webkit-any(.embed, .attachment-image, canvas) {max-width: 100%;}
 .chat .comment {display: flex; flex-direction: column; margin-top: -10px;}
 .chat .message-group .mentioned .message-text {background:transparent !important;}
 .chat .message-group .mentioned .message-text:after {border-left: 0; background:transparent;}
