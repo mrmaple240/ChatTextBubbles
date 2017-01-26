@@ -1,4 +1,4 @@
-//META{"name":"Chat_Text_Bubbles_Minified","description":"Stylize your clients chat messages to look like mobile text messages with text bubbles! minified: less padding around content","author":"maple","version":"1.13"}*//{}
+//META{"name":"Chat_Text_Bubbles_Minified","description":"Stylize your clients chat messages to look like mobile text messages with text bubbles! minified: less padding around content","author":"maple","version":"1.14"}*//{}
 
 .chat .message-group:not(.compact) .markup:not(:empty), .chat .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image, .attachment) {background: rgba(32,37,45,.4); position: relative; width: auto; min-width: 5px; min-height: 16px; max-width: 76%; padding: 4px !important; margin-bottom: 4px; border-radius: 4px;}
 .chat .message-group .comment .attachment {margin: 0 0 5px;}
@@ -30,8 +30,8 @@
 .chat .message .message-text {display: flex; width: auto;}
 .chat .message .image, .chat .embed .embed-thumbnail-gifv video {max-width: 100%; height: auto;}
 .chat .message-group .comment .message.first {margin-top: 10px}
-.chat .message-group:not(.compact) .message.first .markup:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
-.chat .message-group:not(.compact) .message.mentioned.first .markup:before, .chat .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%);}
+.chat .message-group:not(.compact) .message.first .markup:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, transparent 43%, rgba(32,37,45,.43) 43%);}
+.chat .message-group:not(.compact) .message.mentioned.first .markup:before, .chat .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, transparent 43%, rgba(51, 234, 89,.45) 43%);}
 .chat .message-group:not(.compact) .message.mentioned .markup, .message-group.compact .message.mentioned .message-content {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px rgba(0,0,0,.2);}
 .app:not(.theme-light) .chat .message-group:not(.compact) .message.mentioned .markup .mention:not(:hover) {color: #acbeff; background-color: rgba(175,209,215,.07) !important;}
 .app:not(.theme-light) .chat .message-group:not(.compact) .message.mentioned .markup .mention:hover {color: #fff;}
@@ -43,7 +43,7 @@
 /* compact */
 .chat .message-group.compact {margin-left:10px;}
 .chat .message-group.compact .message .message-text{margin-left: -20px;}
-.chat .message-group.compact .message.first .message-content:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, rgba(32,37,45,0) 0%, rgba(32,37,45,0) 42.99%, rgba(32,37,45,.43) 43%, rgba(32,37,45,.43) 100%);}
+.chat .message-group.compact .message.first .message-content:before {content:''; display: block; position: absolute; width: 8px; height: 12px; top: 4px; left: -8px; background:linear-gradient(40deg, transparent 43%, rgba(32,37,45,.43) 43%);}
 .chat .message-group.compact .accessory :-webkit-any(.embed-wrapper, .embed.embed-inline, .attachment-image, .invite-button, .reactions) {margin-left: 12px !important;}
 .chat .message-group.compact .message .message-text .markup {text-indent: 0px; padding-left: 0px; margin-left: 0px; width: 100%; display: flex; margin-left: 12px; margin-top: 0;}
 .chat .message-group.compact .message .message-text .markup .timestamp {color: transparent; margin-right: -116px; margin-left: 46px; margin-top: -7px;}
@@ -60,8 +60,8 @@
 /* light theme */
 .theme-light .chat .message-group:not(.compact) .markup, .theme-light .chat .message-group.compact .message .message-content, .theme-light .chat .accessory :-webkit-any(.embed, .embed-wrapper, .attachment-image) {background: rgba(202,207,215,.4) !important;}
 .theme-light .chat .message-group .embed {background-color: rgba(202,207,215,.4) !important;}
-.theme-light .chat .message-group:not(.compact) .message.first .markup:before, .theme-light .chat .message-group.compact .message.first .message-content:before {background:linear-gradient(40deg, rgba(202,207,215,0) 0%, rgba(202,207,215,0) 42.99%, rgba(202,207,215,.43) 43%, rgba(202,207,215,.43) 100%) !important;}
-.theme-light .chat .message-group:not(.compact) .message.mentioned.first .markup:before, .theme-light .chat .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, rgba(51, 234, 89,0) 0%, rgba(51, 234, 89,0) 42.99%, rgba(51, 234, 89,.45) 43%, rgba(51, 234, 89,.45) 100%) !important;}
-.theme-light .chat .message-group:not(.compact) .message.mentioned .markup, .theme-light .chat .message-group.compact .message.mentioned .message-content {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px rgba(0,0,0,0);}
+.theme-light .chat .message-group:not(.compact) .message.first .markup:before, .theme-light .chat .message-group.compact .message.first .message-content:before {background:linear-gradient(40deg, transparent 43%, rgba(202,207,215,.43) 43%) !important;}
+.theme-light .chat .message-group:not(.compact) .message.mentioned.first .markup:before, .theme-light .chat .message-group.compact .message.mentioned.first .message-content:before {background:linear-gradient(40deg, transparent 43%, rgba(51, 234, 89,.45) 43%) !important;}
+.theme-light .chat .message-group:not(.compact) .message.mentioned .markup, .theme-light .chat .message-group.compact .message.mentioned .message-content {background-color:rgba(51, 234, 89,.45) !important; text-shadow: 0 0 3px transparent;}
 .theme-light .chat .message .mention:not(:hover) { background: rgba(241, 243, 251,.5); border-radius: 2px;}
 .theme-light .chat .message .mention:hover {color: #fff;}
